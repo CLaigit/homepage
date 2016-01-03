@@ -13,13 +13,11 @@ title: Project
   {% for post in site.posts %}
 
   <li>
-    <h3>{{ post.title }}</h3>
     <a href="{{ post.url }}">
       <img src="{{ post.image }}" />
+      <h3>{{ post.title }}</h3>
     </a>
   </li>
-  <div> 
-    This is a DIV sample.
-  </div>
+
   {% endfor %}
 </ul>
