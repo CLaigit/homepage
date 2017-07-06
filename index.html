@@ -1,18 +1,34 @@
 ---
 layout: default
 ---
-<section role="banner">
-  <img src="/img/banner.jpg" />
-</section>
 
-<section class="content">
+<div class="home">
 
-   <p>
+  <h1 class="page-heading">Projects</h1>
 
-  I am a graduate student at UC San Diego in Computational Science. Currently I am looking for full-time postion in Software Engineering or Data Science. <p>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
+        <div class="responsive">
+          <div class="gallery">
+            <a target="_blank" href="{{post.url}}">
+              <img src="{{post.image}}" alt="Trolltunga Norway" width="200" height="200">
+            </a>
+            <div class="desc">{{post.title}}</div>
+          </div>
+        </div>
+        <!-- <div class="gallery">
+          <
+          <img src="{{ post.image }}" />
+        </div> -->
+        <!-- <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2> -->
+      </li>
+    {% endfor %}
+  </ul>
 
-  My graduate study have focused on efficient scientific computation. My favorite areas of study are algorithm design, parallel computing, machine learning, database theory and data mining. I have also deepened my skills in computational mathematics via courses in numerical methods for problems such as linear algebra, ordinary, and partial differential equations. I have even sought opportunities to study how to harness the power of supercomputers and GPUs to produce powerful simulations of collision of galaxies and Ising Model in three-dimension space, some of the most difficult physics problems in gravitation and quantum mechanics.<p>
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
 
-  <!-- Now, I am in Computational Science, Mathematics and Engineering Program in UC San Diego. It is an unparalleled platform from which I can pursue my dream career. I am enthusiastic with big data, which is a promise and a challenge in both industry and academia. . My dream is to become a superlative engineer to make a better world. -->
-  </p>
-</section>
+</div>
